@@ -1,12 +1,13 @@
 // Static Data Store (Replaces Supabase database)
 const PORTFOLIO_DATA = {
   profile: {
-    name: "PRAMUDITA AHMAD",
-    callsign: "PLAYER 1: ACTIVE",
-    title: "SOFTWARE ENGINEER // MUSIC // TEACHING",
-    bio: "Building efficient systems and writing code with passion across low-level operating systems, native desktop software, machine learning, and fullstack architectures.",
-    aboutLong1: "Hello, I'm Pramudita Ahmad, a 21-year-old Information Systems student at Siliwangi University. I've been coding since I was 17, and I love continuous learning across core computer science and software systems.",
-    aboutLong2: "I have a dream to teach computer science because sharing knowledge creates real impact. When I'm not coding, you can find me exploring music and technology.",
+    name: "Pramudita",
+    fullName: "Pramudita Ahmad",
+    headline: "Hello Everyone, I'm Pramudita",
+    title: "Software Engineer , Music & Teaching",
+    subtitle: "I do code for fun & I love it",
+    aboutMe: "Hello, I'm Pramudita Ahmad, a 21-year-old Information Systems student at Siliwangi University. I've been coding since I was 17, I love learning anything but learning in tech is another level. I have a dream to become a teacher in computer science, cause sharing is caring.",
+    socialDescription: "If you want to connect with me, you can reach out through my social media accounts, i humble btw^^",
     resumeUrl: "assets/images/resume.pdf",
     githubUrl: "https://github.com/pramahmad",
     mediumUsername: "rheaa2602",
@@ -18,17 +19,6 @@ const PORTFOLIO_DATA = {
       facebook: "https://www.facebook.com/pramudita.ahmad.10"
     }
   },
-
-  skills: [
-    { name: "LARAVEL / PHP", level: 90 },
-    { name: "VUE.JS / NUXT", level: 95 },
-    { name: "GOLANG", level: 80 },
-    { name: "SQL & DATABASE DESIGN", level: 85 },
-    { name: "CSS & WEB STYLING", level: 95 },
-    { name: "PYTHON / DJANGO", level: 78 },
-    { name: "FLUTTER / DART", level: 75 },
-    { name: "TENSORFLOW / ML", level: 83 }
-  ],
 
   projects: [
     {
@@ -66,13 +56,13 @@ const PORTFOLIO_DATA = {
     },
     {
       id: 4,
-      nama: "Pixel 2D Interactive Web Portfolio",
-      deskripsi: "Retro 2D pixel-styled personal developer portfolio with 8-bit aesthetic, responsive layouts, audio player integration, and zero framework overhead.",
+      nama: "Fullstack Web & Mobile Portfolio Systems",
+      deskripsi: "End-to-end software architectures engineered across web and mobile platforms with clean APIs, responsive design, and robust database architectures.",
       img: "assets/images/avasds.png",
       github: "https://github.com/pramahmad",
       link: "https://pramudita.vercel.app",
-      type: "Frontend Application",
-      stack: "Vanilla HTML5, Pure CSS3, JavaScript",
+      type: "Frontend & Fullstack",
+      stack: "HTML5, CSS3, JavaScript, Vue",
       created_at: "2024-04-25"
     }
   ],
