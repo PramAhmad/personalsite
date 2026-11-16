@@ -490,7 +490,60 @@ a {
   padding: 0.2rem 0.45rem;
   border-radius: 4px;
   font-size: 0.9em;
-  font-family: monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.article-body pre {
+  background-color: #0f172a;
+  color: #f8fafc;
+  padding: 1.25rem 1.5rem;
+  border-radius: var(--radius-md);
+  overflow-x: auto;
+  margin: 1.75rem 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.article-body pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+.code-output {
+  background-color: #f8fafc;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid #64748b;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1rem 0 1.5rem 0;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9rem;
+  color: #1e293b;
+  overflow-x: auto;
+}
+
+.code-output code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.article-callout {
+  background-color: #eff6ff;
+  border-left: 4px solid var(--primary);
+  padding: 1rem 1.25rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin: 1.75rem 0;
+  color: #1e3a8a;
+}
+
+.article-callout p {
+  margin: 0;
+  font-size: 1rem;
 }
 
 /* Home Blog Card */

@@ -24,10 +24,20 @@ const PORTFOLIO_DATA = {
     {
       id: "why-i-rewrote-my-personal-site",
       title: "Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to the HCJ (HTML, CSS, JavaScript) Stack",
+      category: "Architecture",
       date: "Nov 17, 2026",
       readTime: "6 min read",
-      excerpt: "From discovering HTML in 2014, exploring Vue and Supabase, to realizing that sometimes the best engineering decision isn't adding more technology, it's knowing when to strip it away.",
-      url: "blog.html"
+      excerpt: "From discovering HTML in 2014, exploring Vue and Supabase, to realizing that sometimes the best engineering decision isn't adding more technology, it's knowing when to strip it away and return to the fundamentals.",
+      url: "blog-why-i-rewrote-my-personal-site.html"
+    },
+    {
+      id: "all-about-string-in-c",
+      title: "All About String in C",
+      category: "C Programming",
+      date: "Apr 21, 2026",
+      readTime: "3 min read",
+      excerpt: "Di bahasa C, sebenarnya nggak ada tipe data string khusus. Cuma ada sekumpulan karakter (char) yang diakhiri null terminator. Bedah tuntas perbedaan array vs pointer, fungsi <string.h>, dan cara mencegah buffer overflow.",
+      url: "blog-all-about-string-in-c.html"
     }
   ]
 };

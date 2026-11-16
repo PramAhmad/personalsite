@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why I Rewrote My Personal Site to HCJ Stack | Pramudita</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="main">
+    <!-- Navbar -->
+    <header class="site-header">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="index.html" class="logo-brand">
+            Pramudita
+          </a>
+
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html" class="nav-link">Home</a></li>
+              <li><a href="me.html" class="nav-link">About Me</a></li>
+              <li><a href="blog.html" class="nav-link active">Blog</a></li>
+            </ul>
+          </nav>
+
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html" class="mobile-link">Home</a>
+          <a href="me.html" class="mobile-link">About Me</a>
+          <a href="blog.html" class="mobile-link active">Blog</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Article -->
+    <article class="section-hero">
+      <div class="container">
+        <div class="article-wrapper">
+          <!-- Back link -->
+          <div style="margin-bottom: 2rem;">
+            <a href="blog.html" class="btn-outline" style="font-size: 0.85rem; padding: 0.4rem 1.15rem;">
+              &larr; Back to Articles
+            </a>
+          </div>
+
+          <!-- Header -->
+          <header class="article-header">
+            <h1>Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to the HCJ (HTML, CSS, JavaScript) Stack</h1>
+
+            <!-- Metadata under title with Heroicons -->
+            <div class="article-meta" style="margin-top: 1.25rem;">
+              <span class="meta-item text-primary font-medium">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.386a11.966 11.966 0 003.568-3.568c.486-.827.313-1.908-.386-2.607L9.568 3z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
+                </svg>
+                <span>Architecture & Philosophy</span>
+              </span>
+
+              <span class="meta-item">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+                <span>Pramudita Ahmad</span>
+              </span>
+
+              <span class="meta-item">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                </svg>
+                <time datetime="2026-11-17">Nov 17, 2026</time>
+              </span>
+
+              <span class="meta-item">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>6 min read</span>
+              </span>
+            </div>
+          </header>
+
+          <!-- Article Content -->
+          <div class="article-body">
+            <p>
+              I think I first got to know web development around 2014. Back then, I was just a kid who wanted to build something on the internet.
+            </p>
+            <p>
+              I started with HTML. Honestly, all I wanted was to put an image on a webpage. Sounds simple, right? Not for me back then. I spent hours struggling just to make an image show up properly. I was only 11 years old at the time, so that was probably to be expected.
+            </p>
+            <p>
+              During that period, I also tried Bootstrap for the first time. I had no idea how to use it, and I did not manage to build anything useful with it either. But one thing stood out: there were so many technologies available for building websites. That was the spark that got me curious about web development.
+            </p>
+
+            <h2>Getting Started with My First Personal Site</h2>
+            <p>
+              Fast forward to around 2021, I started developing my first personal site.
+            </p>
+            <p>
+              I remember watching tutorials by Sandhika Galih on YouTube. His videos introduced me to building websites using HTML, Bootstrap, and even hooking up a contact form to Google Sheets. It was a simple setup, but it made me realize that I could build something genuinely useful with just a few basic tools.
+            </p>
+            <p>
+              That was when I started taking web development more seriously.
+            </p>
+            <p>
+              I began exploring deeper into CSS and eventually moved to utility CSS frameworks like Tailwind CSS. Styling websites became surprisingly enjoyable. There was something satisfying about turning a plain HTML structure into an actual interface, and that was where my interest in frontend development really took off.
+            </p>
+
+            <h2>Exploring the Web Development Ecosystem</h2>
+            <p>
+              As I continued learning, I started exploring different technologies across the web stack.
+            </p>
+            <p>
+              One of the first programming languages I encountered for the web was PHP. To be honest, PHP was not my favorite language at first, but it was part of the learning process and taught me a lot.
+            </p>
+            <p>
+              At that point, I realized web development was much bigger than just HTML and CSS. There were frontend frameworks, backend runtimes, databases, state management, APIs, and endless tools to explore.
+            </p>
+            <p>
+              Btw, my first experience with a modern frontend stack was React paired with Redux. And yeah, it was really difficult for me lol. There were so many concepts to grasp, and managing state with Redux felt overwhelming at the time.
+            </p>
+            <p>
+              Then, one of my teachers suggested that I try Vue instead.
+            </p>
+            <p>
+              <strong>And I fell in love with it. Seriously, thanks god I found Vue.</strong>
+            </p>
+            <p>
+              I found Vue much more comfortable to work with. Its approach to components, templates, and reactivity made complete sense to me. I built quite a few prototypes using Vue and Tailwind CSS. It was a fun period because I could focus on building interfaces and experimenting with ideas instead of constantly fighting my tools.
+            </p>
+
+            <h2>I Needed a Backend +_+</h2>
+            <p>
+              Eventually, I started building applications that required more than just a frontend. I needed dynamic data, database integration, authentication, and backend capabilities.
+            </p>
+            <p>
+              Since I was studying Software Engineering at a vocational high school (SMK), I was introduced to Supabase as a Backend as a Service (BaaS). At that time, Supabase was becoming popular, especially because it used PostgreSQL as its database engine.
+            </p>
+            <p>
+              That was particularly interesting to me because I was already familiar with relational databases and SQL. Before that, Firebase was another option I had tried, but its document NoSQL approach felt less familiar than working with relational tables.
+            </p>
+            <p>
+              Supabase felt like a natural fit. It allowed me to work with PostgreSQL without having to build and manage an entire backend from scratch. From there, my projects became more ambitious, and I started exploring more technologies and architecture patterns.
+            </p>
+
+            <h2>Building My Seriously Personal Site</h2>
+            <p>
+              After learning Vue and exploring backend technologies, I eventually started building a more complete version of my personal site.
+            </p>
+            <p>
+              At this point, I wanted something more than just a simple webpage with my name and a list of projects. I wanted a digital home where I could introduce myself, showcase my work, share my thoughts, and give people a better understanding of who I am as a developer.
+            </p>
+            <p>
+              The personal site was built using Nuxt, Tailwind CSS, Supabase, along with a few small helper JavaScript libraries.
+            </p>
+            <p>
+              I chose Nuxt because I was already comfortable with Vue, and Nuxt provided a structured way to build a complete website. Tailwind CSS helped me build the interface faster, while Supabase handled the data and backend features.
+            </p>
+            <p>The website was designed around several main sections:</p>
+            <ul>
+              <li><strong>Hero Section:</strong> The first greeting visitors see. It introduces me, gives a brief overview of what I do, and provides a starting point for exploring the rest of the site.</li>
+              <li><strong>About Me:</strong> A place where I share more about my background, interests, and journey in software engineering.</li>
+              <li><strong>Projects:</strong> A collection of projects I worked on, including descriptions, tech stacks, and source links.</li>
+              <li><strong>Blog:</strong> A space where I write about technical experiences, things I learned, personal opinions, and random thoughts related to software engineering.</li>
+              <li><strong>Contact:</strong> Direct ways to reach me through email and social media.</li>
+              <li><strong>My Music:</strong> A personal touch displaying some of my favorite tracks. I think a personal site does not always have to be strictly corporate, adding something personal makes it feel more like me.</li>
+            </ul>
+            <blockquote>
+              "I can do anything I want, it's my personal site loller."
+            </blockquote>
+
+            <h2>Why Did I Choose Supabase</h2>
+            <p>
+              One of the key parts of this project was how I managed its content. Since I wanted the personal site to be dynamic, I wanted a way to manage project information, blog posts, and other content without manually changing frontend code every time.
+            </p>
+            <p>
+              I used Supabase as the backend, with PostgreSQL as the database. Instead of hardcoding everything into templates, I could store and retrieve content dynamically.
+            </p>
+            <p>
+              At the time, that felt like a reasonable architectural decision. Connecting Nuxt to Supabase also gave me an opportunity to explore database queries, API requests, and client-server communication. It was not just about making my site work, it was also a great learning experience.
+            </p>
+
+            <h2>But Do I Really Need All of That?</h2>
+            <p>
+              After using this setup for a while, I started looking at the project from a different perspective.
+            </p>
+            <p>
+              The personal site was working fine, and I had no complaints about Nuxt or Supabase as tools. The question was whether that architecture still made sense for what the website actually needed.
+            </p>
+            <p>
+              Think about how often I update my personal site. Maybe once every two months, and usually just to add one new project. The blog is something I update occasionally rather than every day. My music section does not need frequent changes either. And for contact, most people who reach out contact me directly through social media anyway.
+            </p>
+            <p>
+              So I started questioning the value of maintaining a database and a CMS workflow for a small amount of relatively static information. Was I solving an actual problem, or was I just maintaining a system I did not really need?
+            </p>
+
+            <h2>The Cost of Keeping Things Dynamic</h2>
+            <p>
+              Another thing I started considering was the operational cost and external dependencies.
+            </p>
+            <p>
+              Supabase offers a generous free tier, which is great for personal projects. However, free services come with usage quotas, resource limitations, and inactivity policies that pause your database if there is no traffic for a while. I did not like having an external cloud dependency just to display a few project entries and blog posts.
+            </p>
+            <p>
+              On the other hand, what if I hosted my own backend and database on a VPS? Let's assume I rent a small VPS for around IDR 150,000 per month. It might seem affordable at first, but the cost adds up over time:
+            </p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Period</th>
+                  <th>Estimated Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 month</td>
+                  <td>IDR 150,000</td>
+                </tr>
+                <tr>
+                  <td>1 year</td>
+                  <td>IDR 1,800,000</td>
+                </tr>
+                <tr>
+                  <td>2 years</td>
+                  <td>IDR 3,600,000</td>
+                </tr>
+                <tr>
+                  <td>3 years</td>
+                  <td>IDR 5,400,000</td>
+                </tr>
+              </tbody>
+            </table>
+            <p class="article-note">
+              Note: These figures are estimates based on a fixed monthly VPS cost of IDR 150,000, excluding domain registration, backups, and server maintenance overhead.
+            </p>
+
+            <p>
+              Spending IDR 5.4 million over three years, plus handling server monitoring, security updates, and backups, just to keep a personal site alive felt excessive. I enjoy Linux system administration, but enjoying something does not mean I should force it into every small project.
+            </p>
+
+            <h2>What Programming in C Taught Me About Web Bloat</h2>
+            <p>
+              Around that same time, my focus shifted toward systems programming in C across Linux and Windows. I built native desktop applications, wrote a lightweight relational database client from scratch, and created a CLI music player.
+            </p>
+            <p>
+              Working with C changes how you think about software. When you build native applications or CLI tools in C, you become hyper-aware of memory, dependencies, and what the machine is actually doing under the hood. Your program compiles into a tiny, fast binary that does exactly what it needs to do, nothing more, nothing less.
+            </p>
+            <p>
+              Then I looked back at my personal site.
+            </p>
+            <p>
+              To render a few pages of text, links, and images, I was relying on a massive <code>node_modules</code> folder, a reactive JavaScript framework, a CSS build pipeline, and remote API calls to a cloud database. After experiencing the raw simplicity and speed of native C programs, my web stack suddenly felt unnecessarily bloated.
+            </p>
+            <p>
+              I realized I wanted my personal site to reflect that same philosophy: close to the platform of the browser, zero unnecessary abstractions, and completely self-contained.
+            </p>
+
+            <h2>Do I Really Need a CMS?</h2>
+            <p>
+              When I looked closely at my workflow, the contrast became even clearer.
+            </p>
+            <p>With a dynamic CMS-based approach, I had to maintain:</p>
+            <ul>
+              <li>The content management interface.</li>
+              <li>The PostgreSQL database and its schema.</li>
+              <li>The connection and environment variables between Nuxt and Supabase.</li>
+              <li>API requests, loading states, and error handling.</li>
+              <li>External service availability.</li>
+              <li>Build and deployment configurations.</li>
+            </ul>
+
+            <p>With a static approach using the HCJ (HTML, CSS, JavaScript) stack, the workflow is stripped down to the essentials:</p>
+            <ol>
+              <li>Open the HTML file and edit the text.</li>
+              <li>Commit the changes to Git.</li>
+              <li>Push to deploy.</li>
+            </ol>
+            <p>
+              That is it. I also get version control for free through Git. Every content update becomes part of the repository history, allowing me to track modifications and roll back changes effortlessly.
+            </p>
+            <p>
+              For contact, direct links to my LinkedIn, GitHub, and email accomplish the exact same goal as a backend contact form without any of the complexity. And for the blog and music sections, static files are more than enough for content that only changes occasionally.
+            </p>
+
+            <h2>Back to the HCJ (HTML, CSS, JavaScript) Stack</h2>
+            <p>
+              After considering all of that, I decided to rewrite my entire personal site using plain HTML, CSS, and JavaScript. No Nuxt. No Tailwind build step. No Supabase. No database. Just the fundamentals of the web.
+            </p>
+            <p>
+              This was not because I suddenly disliked modern frameworks. I still use them for complex applications where they provide real value. But for my personal site, I wanted radical simplicity.
+            </p>
+            <p>
+              For hosting, I can simply use static platforms like GitHub Pages or Cloudflare Pages at zero cost, with near-instant load times and zero database cold starts.
+            </p>
+            <p>The result is a much cleaner architecture:</p>
+            <ul>
+              <li>No database or backend infrastructure to maintain.</li>
+              <li>Zero external runtime dependencies or build step headaches.</li>
+              <li>No CMS to manage.</li>
+              <li>A frictionless Git deployment workflow.</li>
+              <li>Zero operational cost.</li>
+            </ul>
+            <p>
+              Most importantly, I can spend my time building actual software, whether that is full-stack web apps or native tools in C, instead of maintaining the infrastructure behind a personal site that rarely changes.
+            </p>
+
+            <h2>Engineering Is Knowing What to Leave Out</h2>
+            <p>
+              Being a software engineer is not about always using the latest technology, chasing the most popular framework, or building the most sophisticated architecture possible. It is about understanding the problem, respecting the platform, and choosing an appropriate solution.
+            </p>
+            <p>
+              There is a big difference between building something because we need it and building something simply because we can.
+            </p>
+            <p>
+              In my case, moving from Nuxt, Tailwind, and Supabase back to plain HTML, CSS, and JavaScript was not a step backward. It was a conscious engineering decision. Sometimes, the best engineering decision is not adding another technology, it is knowing when to strip things away.
+            </p>
+
+            <h2>Looking Back</h2>
+            <p>
+              Back in 2014, I was just an 11 year old kid trying to figure out how to put an image on a webpage. Years later, after experimenting with reactive frameworks, cloud databases, and low-level C programming, I find myself appreciating the web's core foundations more than ever.
+            </p>
+            <p>
+              Learning those frameworks was still a great experience because it taught me why and when certain abstractions actually matter. But for this site, going back to basic HTML, CSS, and vanilla JavaScript felt like the right move.
+            </p>
+          </div>
+
+          <!-- Bottom Author Bio -->
+          <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border-color); display: flex; align-items: center; gap: 1.5rem;">
+            <img src="assets/images/avatar.png" alt="Pramudita" style="width: 72px; height: 72px; border-radius: 9999px; object-fit: cover;">
+            <div>
+              <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Written by Pramudita Ahmad</h3>
+              <p class="text-slate-500" style="margin: 0; font-size: 0.95rem;">
+                Software Engineer
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="grid grid-cols-2 gap-8">
+          <div>
+            <h5 class="text-slate-700 font-semibold" style="font-size: 1.15rem; margin-bottom: 0.75rem;">Who Am I?</h5>
+            <p class="text-slate-500" style="margin-bottom: 1.25rem; max-width: 420px;">
+              Information Systems student at Siliwangi University, software engineer, and passionate learner. I love coding for fun and dream of teaching computer science.
+            </p>
+            <div class="footer-social-links">
+              <a href="https://github.com/pramahmad" target="_blank" rel="noopener noreferrer" title="GitHub">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/pramudita-ahmad-4ba11a232/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="https://twitter.com/PramuditaAhmad1" target="_blank" rel="noopener noreferrer" title="Twitter">
+                <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+              </a>
+              <a href="mailto:pramuditaadit2810@gmail.com" title="Email">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h5 class="text-slate-700 font-semibold" style="font-size: 1.15rem; margin-bottom: 0.75rem;">Navigation</h5>
+            <ul style="list-style: none; padding: 0; margin: 0; line-height: 2;">
+              <li><a href="index.html" class="text-slate-500" style="text-decoration: none;">Home</a></li>
+              <li><a href="me.html" class="text-slate-500" style="text-decoration: none;">About Me</a></li>
+              <li><a href="blog.html" class="text-slate-500" style="text-decoration: none;">Blog</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="text-slate-400" style="margin: 0; font-size: 0.9rem;">
+            Designed &amp; Built with pure HTML, CSS &amp; Vanilla JS by Pramudita.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
