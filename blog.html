@@ -58,17 +58,39 @@
 
           <!-- Header -->
           <header class="article-header">
-            <div class="article-meta" style="margin-bottom: 1rem;">
-              <span class="badge">Architecture & Philosophy</span>
-              <span>•</span>
-              <time datetime="2026-11-17">Nov 17, 2026</time>
-              <span>•</span>
-              <span>6 min read</span>
-            </div>
             <h1>Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to the HCJ (HTML, CSS, JavaScript) Stack</h1>
-            <p class="text-slate-500 font-medium" style="font-size: 1.15rem; line-height: 1.7; margin: 0;">
-              By <span class="text-slate-900 font-semibold">Pramudita Ahmad</span>
-            </p>
+
+            <!-- Metadata under title with Heroicons -->
+            <div class="article-meta" style="margin-top: 1.25rem;">
+              <span class="meta-item text-primary font-medium">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.568 3H5.25A2.25 2.25 0 003 5.25v4.318c0 .597.237 1.17.659 1.591l9.581 9.581c.699.699 1.78.872 2.607.386a11.966 11.966 0 003.568-3.568c.486-.827.313-1.908-.386-2.607L9.568 3z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 6h.008v.008H6V6z" />
+                </svg>
+                <span>Architecture & Philosophy</span>
+              </span>
+
+              <span class="meta-item">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                </svg>
+                <span>Pramudita Ahmad</span>
+              </span>
+
+              <span class="meta-item">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                </svg>
+                <time datetime="2026-11-17">Nov 17, 2026</time>
+              </span>
+
+              <span class="meta-item">
+                <svg class="meta-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>6 min read</span>
+              </span>
+            </div>
           </header>
 
           <!-- Article Content -->
@@ -77,7 +99,7 @@
               I think I first got to know web development around 2014. Back then, I was just a kid who wanted to build something on the internet.
             </p>
             <p>
-              I started with HTML. Honestly, I just wanted to display an image on a webpage. Sounds simple, right? Well, not for me at that time. I struggled just to get an image displayed correctly. But I guess that's understandable — I was only around 11 years old.
+              I started with HTML. Honestly, I just wanted to display an image on a webpage. Sounds simple, right? Well, not for me at that time. I struggled just to get an image displayed correctly. But I guess that's understandable, I was only around 11 years old.
             </p>
             <p>
               During that period, I also tried Bootstrap for the first time. I didn't really understand how to use it, and I don't think I successfully built anything with it either. But there was one thing I noticed: there were so many technologies available for building websites.
@@ -157,7 +179,7 @@
               <li><strong>Projects:</strong> A collection of projects I've worked on, including descriptions, tech stacks, and relevant details.</li>
               <li><strong>Blog:</strong> A space where I write about technical experiences, things I've learned, personal opinions, and random thoughts related to software engineering.</li>
               <li><strong>Contact:</strong> A section containing ways to reach me through email and social media.</li>
-              <li><strong>My Music:</strong> A little personal touch displaying some of my favorite tracks. I think a personal site doesn't always have to be strictly professional — adding something personal makes it feel more like me.</li>
+              <li><strong>My Music:</strong> A little personal touch displaying some of my favorite tracks. I think a personal site doesn't always have to be strictly professional, adding something personal makes it feel more like me.</li>
             </ul>
             <blockquote>
               "I can do anything I want, it's my personal site loller."
@@ -171,7 +193,7 @@
               I used Supabase as the backend, with PostgreSQL as the database. Instead of hardcoding everything into the frontend, I could store and retrieve content dynamically.
             </p>
             <p>
-              At that time, it felt like a reasonable architectural decision. Connecting Nuxt to Supabase also gave me an opportunity to explore database integration, API requests, and the relationship between frontend and backend systems. So, it wasn't just about making my personal site work — it was also a learning experience.
+              At that time, it felt like a reasonable architectural decision. Connecting Nuxt to Supabase also gave me an opportunity to explore database integration, API requests, and the relationship between frontend and backend systems. So, it wasn't just about making my personal site work, it was also a learning experience.
             </p>
 
             <h2>But Do I Really Need All of That?</h2>
@@ -230,7 +252,7 @@
             </p>
 
             <p>
-              Spending IDR 5.4 million over three years — plus handling server monitoring, security updates, and backups — just to keep a personal site alive feels excessive. I enjoy infrastructure and Linux system administration, but enjoying something doesn't mean I should force it into every project.
+              Spending IDR 5.4 million over three years, plus handling server monitoring, security updates, and backups, just to keep a personal site alive feels excessive. I enjoy infrastructure and Linux system administration, but enjoying something doesn't mean I should force it into every project.
             </p>
 
             <h2>What Programming in C Taught Me About Web Bloat</h2>
@@ -241,7 +263,7 @@
               Outside of web development, I started spending a lot of time programming in C and exploring systems programming across both Windows and Linux. I built native desktop applications, wrote a lightweight relational database client from scratch, and even created a CLI-based music player.
             </p>
             <p>
-              Working with C changes the way you look at software. When you build native applications or CLI tools in C, you become hyper-aware of memory, dependencies, and what the machine is actually doing under the hood. Your program compiles into a tiny, fast binary that does exactly what it needs to do — nothing more, nothing less.
+              Working with C changes the way you look at software. When you build native applications or CLI tools in C, you become hyper-aware of memory, dependencies, and what the machine is actually doing under the hood. Your program compiles into a tiny, fast binary that does exactly what it needs to do, nothing more, nothing less.
             </p>
             <p>
               Then I looked back at my personal site.
@@ -299,7 +321,7 @@
               <li>Zero operational cost.</li>
             </ul>
             <p>
-              Most importantly, I can spend my time building actual software — whether that's full-stack web apps or native tools in C — instead of maintaining the infrastructure behind a personal site that rarely changes.
+              Most importantly, I can spend my time building actual software, whether that's full-stack web apps or native tools in C, instead of maintaining the infrastructure behind a personal site that rarely changes.
             </p>
 
             <h2>Engineering Is Not About Using as Many Technologies as Possible</h2>
@@ -310,7 +332,7 @@
               There is a big difference between building something because we need it and building something simply because we can.
             </p>
             <p>
-              In my case, moving from Nuxt, Tailwind, and Supabase back to plain HTML, CSS, and JavaScript wasn't a step backward or a limitation. It was a conscious engineering decision. Sometimes, the best engineering decision isn't adding another technology — it's knowing when to strip them away.
+              In my case, moving from Nuxt, Tailwind, and Supabase back to plain HTML, CSS, and JavaScript wasn't a step backward or a limitation. It was a conscious engineering decision. Sometimes, the best engineering decision isn't adding another technology, it's knowing when to strip them away.
             </p>
 
             <h2>Looking Back</h2>
@@ -321,7 +343,7 @@
               Back in 2014, I was just an 11-year-old kid struggling to display an image using HTML. Now, after years of exploring full-stack frameworks, cloud databases, and low-level programming in C, I find myself appreciating the raw fundamentals of the web even more.
             </p>
             <p>
-              Learning modern frameworks wasn't a waste of time — those experiences taught me why and when certain abstractions are useful. And sometimes, going back to where you started isn't going backward at all. It's moving forward with clarity.
+              Learning modern frameworks wasn't a waste of time, those experiences taught me why and when certain abstractions are useful. And sometimes, going back to where you started isn't going backward at all. It's moving forward with clarity.
             </p>
           </div>
 
@@ -331,7 +353,7 @@
             <div>
               <h3 style="font-size: 1.15rem; margin-bottom: 0.25rem;">Written by Pramudita Ahmad</h3>
               <p class="text-slate-500" style="margin: 0; font-size: 0.95rem;">
-                Software Engineer passionate about C systems programming, Linux, and web fundamentals.
+                Software Engineer
               </p>
             </div>
           </div>

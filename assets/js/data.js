@@ -26,7 +26,7 @@ const PORTFOLIO_DATA = {
       title: "Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to the HCJ (HTML, CSS, JavaScript) Stack",
       date: "Nov 17, 2026",
       readTime: "6 min read",
-      excerpt: "From discovering HTML in 2014, exploring Vue and Supabase, to realizing that sometimes the best engineering decision isn't adding more technology—it's knowing when to strip it away.",
+      excerpt: "From discovering HTML in 2014, exploring Vue and Supabase, to realizing that sometimes the best engineering decision isn't adding more technology, it's knowing when to strip it away.",
       url: "blog.html"
     }
   ]
