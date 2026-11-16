@@ -1,7 +1,21 @@
 // Antigravity Minimalist Modern JavaScript
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
+  initMaxStr();
 });
+
+/* ============================================================
+   STRING TRUNCATION / MAX STR HELPER
+   ============================================================ */
+function initMaxStr() {
+  document.querySelectorAll('[data-max-str]').forEach(el => {
+    const max = parseInt(el.getAttribute('data-max-str'), 10) || 160;
+    const text = el.textContent.trim();
+    if (text.length > max) {
+      el.textContent = text.slice(0, max).trim() + '...';
+    }
+  });
+}
 
 /* ============================================================
    NAVBAR & SCROLL BEHAVIOR

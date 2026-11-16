@@ -212,7 +212,7 @@
         <!-- Static Article Card -->
         <div style="max-width: 820px; margin: 0 auto;">
           <article class="home-blog-card">
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; font-size: 0.9rem; color: #64748b;">
+            <div class="home-blog-card-meta">
               <span class="text-primary font-semibold">Architecture</span>
               <span>•</span>
               <span>Nov 17, 2026</span>
@@ -221,12 +221,12 @@
             </div>
 
             <a href="blog.html">
-              <h3 style="transition: color 0.2s;">
+              <h3>
                 Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to the HCJ (HTML, CSS, JavaScript) Stack
               </h3>
             </a>
 
-            <p>
+            <p data-max-str="165" class="max-str-clamp">
               From discovering HTML in 2014, exploring Vue and Supabase, to realizing that sometimes the best engineering decision isn't adding more technology—it's knowing when to strip it away and return to the fundamentals.
             </p>
 
