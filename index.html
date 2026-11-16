@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pramudita | Software Engineer (Pixel 2D)</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Silkscreen:wght@400;700&family=VT323&display=swap">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div id="main">
+    <!-- Navbar -->
+    <header class="site-header">
+      <div class="container">
+        <div class="navbar-inner">
+          <a href="index.html" class="logo-brand">
+            <span>👾</span>
+            <span>PRAMUDITA.EXE</span>
+            <span class="pixel-blink" style="display:inline-block; width:6px; height:12px; background:#000;"></span>
+          </a>
+
+          <nav>
+            <ul class="nav-links">
+              <li><a href="index.html" class="nav-link active">[ HOME ]</a></li>
+              <li><a href="me.html" class="nav-link">[ ABOUT ]</a></li>
+              <li><a href="project.html" class="nav-link">[ PROJECTS ]</a></li>
+              <li><a href="blog.html" class="nav-link">[ BLOG ]</a></li>
+              <li><a href="contact.html" class="nav-link">[ CONTACT ]</a></li>
+            </ul>
+          </nav>
+
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+          <a href="index.html" class="mobile-link active">▶ HOME</a>
+          <a href="me.html" class="mobile-link">▶ ABOUT ME</a>
+          <a href="project.html" class="mobile-link">▶ PROJECTS</a>
+          <a href="blog.html" class="mobile-link">▶ BLOG</a>
+          <a href="contact.html" class="mobile-link">▶ CONTACT</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-hero">
+      <div class="container">
+        <div class="grid grid-cols-2 items-center gap-8">
+          <!-- Text Info (Left) -->
+          <div>
+            <div class="pixel-badge pixel-badge-light" style="margin-bottom: 1.25rem;">
+              <span class="pixel-blink" style="display: inline-block; width: 8px; height: 8px; background: #000;"></span>
+              <span>PLAYER 1: ACTIVE</span>
+              <span>⚡</span>
+            </div>
+
+            <p style="font-family: var(--font-press); font-size: 0.95rem; margin-bottom: 0.5rem;">HELLO WORLD, I'M</p>
+            <h1 style="font-size: 2.2rem; margin-bottom: 1rem;">PRAMUDITA</h1>
+
+            <div class="pixel-box" style="padding: 0.75rem 1rem; border-left-width: 6px; margin-bottom: 1.25rem;">
+              <p class="font-press" style="font-size: 0.8rem; margin: 0; text-transform: uppercase;">
+                &gt; SOFTWARE ENGINEER // MUSIC // TEACHING
+              </p>
+            </div>
+
+            <p style="font-size: 1.1rem; color: #27272a; margin-bottom: 1.5rem;">
+              Building efficient systems and writing code with passion across low-level operating systems, native desktop software, machine learning, and fullstack architectures.
+            </p>
+
+            <div class="flex flex-wrap gap-3">
+              <a href="assets/images/resume.pdf" target="_blank" class="btn-pixel-primary">
+                <span>💾 DOWNLOAD RESUME</span>
+              </a>
+              <a href="https://github.com/pramahmad" target="_blank" class="btn-pixel">
+                <span>👾 GITHUB REPO</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Character Pixel Stage (Right) -->
+          <div>
+            <div class="hero-stage-box">
+              <div class="speech-bubble">
+                💬 "READY FOR QUEST!"
+              </div>
+
+              <div class="flex items-center justify-between" style="border-bottom: 3px solid #000; padding-bottom: 0.5rem; margin-bottom: 0.75rem; font-family: var(--font-press); font-size: 9px;">
+                <span class="flex items-center gap-2">
+                  <span style="display: inline-block; width: 8px; height: 8px; background: #000;"></span>
+                  HERO_STAGE.EXE
+                </span>
+                <span class="pixel-badge-dark" style="font-size: 7px; padding: 2px 6px;">LVL. 21</span>
+              </div>
+
+              <div class="stage-frame">
+                <img src="assets/images/pramudita.png" alt="Pramudita Sprite" class="stage-img">
+                <div class="stage-floor">
+                  ★ HERO SPRITE ★
+                </div>
+              </div>
+
+              <!-- Game HUD -->
+              <div class="stat-bars">
+                <div class="stat-box">
+                  <div class="flex justify-between" style="font-size: 7px; margin-bottom: 2px;">
+                    <span>HP</span><span>100/100</span>
+                  </div>
+                  <div class="stat-meter"><div class="stat-fill" style="width: 100%;"></div></div>
+                </div>
+                <div class="stat-box">
+                  <div class="flex justify-between" style="font-size: 7px; margin-bottom: 2px;">
+                    <span>MP</span><span>100/100</span>
+                  </div>
+                  <div class="stat-meter"><div class="stat-fill" style="width: 100%;"></div></div>
+                </div>
+              </div>
+
+              <div class="hud-details">
+                <span>EXP: 9999/9999</span>
+                <span style="border: 1px solid #000; background: #fff; padding: 1px 4px;">CLASS: ARCHITECT</span>
+                <span style="border: 1px solid #000; background: #fff; padding: 1px 4px;">ITEM: ☕ COFFEE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise Section (Passionate About) -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="container">
+        <div class="pixel-box" style="margin-bottom: 2rem;">
+          <div class="flex items-center gap-2" style="font-family: var(--font-press); font-size: 10px; color: #52525b; margin-bottom: 0.5rem;">
+            <span style="display: inline-block; width: 8px; height: 8px; background: #000;"></span>
+            <span>EXPERTISE.SYS</span>
+          </div>
+          <h2 style="margin-bottom: 0.75rem;">WHAT I AM PASSIONATE ABOUT</h2>
+          <p style="margin: 0; color: #3f3f46;">
+            I specialize in operating system programming, native desktop applications, machine learning, Linux systems, and scalable fullstack development with strong algorithmic fundamentals.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-3">
+          <!-- OS Programming -->
+          <div class="pixel-card flex-col justify-between" style="display: flex;">
+            <div>
+              <div class="pixel-badge" style="padding: 0.6rem; margin-bottom: 1rem;">
+                <svg class="pixel-img" style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3h20v18H2V3zm2 2v14h16V5H4zm2 2h2v2H6V7zm2 2h2v2H8V9zm-2 2h2v2H6v-2zm6 4h6v2h-6v-2z"/>
+                </svg>
+              </div>
+              <h3 style="margin-bottom: 0.75rem;">OS Programming</h3>
+              <p style="font-size: 0.95rem; color: #3f3f46;">
+                I focus on operating system programming, native desktop development, and Linux-based systems. I enjoy building low-level, high-efficiency software close to the hardware layer.
+              </p>
+            </div>
+            <div class="flex justify-between" style="border-top: 2px solid rgba(0,0,0,0.1); padding-top: 0.75rem; margin-top: 1rem; font-family: var(--font-press); font-size: 9px; color: #71717a;">
+              <span>SKILL.NODE</span>
+              <span>[ ACTIVE ]</span>
+            </div>
+          </div>
+
+          <!-- Machine Learning -->
+          <div class="pixel-card flex-col justify-between" style="display: flex;">
+            <div>
+              <div class="pixel-badge" style="padding: 0.6rem; margin-bottom: 1rem;">
+                <svg class="pixel-img" style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11 2h2v3h-2V2zM7 5h10v2h2v12h-2v3H7v-3H5V7h2V5zm0 4v8h10V9H7zm2 2h2v2H9v-2zm4 0h2v2h-2v-2zm-3 4h4v2h-4v-2z"/>
+                </svg>
+              </div>
+              <h3 style="margin-bottom: 0.75rem;">Machine Learning</h3>
+              <p style="font-size: 0.95rem; color: #3f3f46;">
+                Practical machine learning implementations for real-world problems. From dataset preparation and feature engineering to model deployment and scalable evaluation.
+              </p>
+            </div>
+            <div class="flex justify-between" style="border-top: 2px solid rgba(0,0,0,0.1); padding-top: 0.75rem; margin-top: 1rem; font-family: var(--font-press); font-size: 9px; color: #71717a;">
+              <span>SKILL.NODE</span>
+              <span>[ ACTIVE ]</span>
+            </div>
+          </div>
+
+          <!-- Fullstack Development -->
+          <div class="pixel-card flex-col justify-between" style="display: flex;">
+            <div>
+              <div class="pixel-badge" style="padding: 0.6rem; margin-bottom: 1rem;">
+                <svg class="pixel-img" style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="currentColor">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3h20v18H2V3zm2 2v3h16V5H4zm0 5v9h16v-9H4zm3 3h2v2H7v-2zm-2 0h1v2H5v-2zm4 0h1v2H9v-2zm4 2h4v2h-4v-2z"/>
+                </svg>
+              </div>
+              <h3 style="margin-bottom: 0.75rem;">Fullstack Dev</h3>
+              <p style="font-size: 0.95rem; color: #3f3f46;">
+                End-to-end fullstack solutions spanning frontend, backend APIs, database design, and query optimization with clean architecture and strict type safety.
+              </p>
+            </div>
+            <div class="flex justify-between" style="border-top: 2px solid rgba(0,0,0,0.1); padding-top: 0.75rem; margin-top: 1rem; font-family: var(--font-press); font-size: 9px; color: #71717a;">
+              <span>SKILL.NODE</span>
+              <span>[ ACTIVE ]</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section">
+      <div class="container">
+        <div class="pixel-box">
+          <div class="flex items-center justify-between" style="border-bottom: 2px solid #000; padding-bottom: 0.75rem; margin-bottom: 1.5rem; font-family: var(--font-press); font-size: 11px;">
+            <span class="flex items-center gap-2">
+              <span style="display: inline-block; width: 8px; height: 8px; background: #000;"></span>
+              <span>SKILL_MATRIX.DAT</span>
+            </span>
+            <span style="font-size: 9px; color: #71717a;">[ STATS OVERVIEW ]</span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-6">
+            <!-- Skill 1 -->
+            <div>
+              <div class="flex justify-between" style="font-family: var(--font-press); font-size: 11px; margin-bottom: 0.4rem;">
+                <span>LARAVEL / PHP</span><span>90%</span>
+              </div>
+              <div class="stat-meter" style="height: 16px;"><div class="stat-fill" style="width: 90%;"></div></div>
+            </div>
+            <!-- Skill 2 -->
+            <div>
+              <div class="flex justify-between" style="font-family: var(--font-press); font-size: 11px; margin-bottom: 0.4rem;">
+                <span>VUE.JS / NUXT</span><span>95%</span>
+              </div>
+              <div class="stat-meter" style="height: 16px;"><div class="stat-fill" style="width: 95%;"></div></div>
+            </div>
+            <!-- Skill 3 -->
+            <div>
+              <div class="flex justify-between" style="font-family: var(--font-press); font-size: 11px; margin-bottom: 0.4rem;">
+                <span>GOLANG</span><span>80%</span>
+              </div>
+              <div class="stat-meter" style="height: 16px;"><div class="stat-fill" style="width: 80%;"></div></div>
+            </div>
+            <!-- Skill 4 -->
+            <div>
+              <div class="flex justify-between" style="font-family: var(--font-press); font-size: 11px; margin-bottom: 0.4rem;">
+                <span>SQL & DATABASE</span><span>85%</span>
+              </div>
+              <div class="stat-meter" style="height: 16px;"><div class="stat-fill" style="width: 85%;"></div></div>
+            </div>
+            <!-- Skill 5 -->
+            <div>
+              <div class="flex justify-between" style="font-family: var(--font-press); font-size: 11px; margin-bottom: 0.4rem;">
+                <span>CSS & STYLING</span><span>95%</span>
+              </div>
+              <div class="stat-meter" style="height: 16px;"><div class="stat-fill" style="width: 95%;"></div></div>
+            </div>
+            <!-- Skill 6 -->
+            <div>
+              <div class="flex justify-between" style="font-family: var(--font-press); font-size: 11px; margin-bottom: 0.4rem;">
+                <span>PYTHON / ML</span><span>83%</span>
+              </div>
+              <div class="stat-meter" style="height: 16px;"><div class="stat-fill" style="width: 83%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section">
+      <div class="container">
+        <div class="pixel-box" style="margin-bottom: 2rem;">
+          <div class="flex items-center justify-between" style="border-bottom: 2px solid #000; padding-bottom: 0.5rem; margin-bottom: 0.75rem; font-family: var(--font-press); font-size: 10px;">
+            <span class="flex items-center gap-2">
+              <span style="display: inline-block; width: 8px; height: 8px; background: #000;"></span>
+              <span>PROJECT_SHOWCASE.BIN</span>
+            </span>
+            <span style="color: #71717a;">[ TOP ENTRIES ]</span>
+          </div>
+          <h2>FEATURED PROJECTS</h2>
+          <p style="margin: 0; color: #3f3f46;">
+            A selection of software systems, native Linux applications, and machine learning research projects I've built.
+          </p>
+        </div>
+
+        <div id="projectsContainer" data-view="home">
+          <!-- Static Projects Rendered by main.js -->
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="project.html" class="btn-pixel-primary" style="padding: 0.85rem 2rem;">
+            <span>[ 👾 VIEW ALL PROJECTS ]</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section">
+      <div class="container">
+        <div class="pixel-box" style="margin-bottom: 2rem;">
+          <div class="flex items-center justify-between" style="border-bottom: 2px solid #000; padding-bottom: 0.5rem; margin-bottom: 0.75rem; font-family: var(--font-press); font-size: 10px;">
+            <span class="flex items-center gap-2">
+              <span style="display: inline-block; width: 8px; height: 8px; background: #000;"></span>
+              <span>DEV_LOGS.EXE</span>
+            </span>
+            <span style="color: #71717a;">[ MEDIUM RSS ]</span>
+          </div>
+          <h2>LATEST DEV LOGS</h2>
+          <p style="margin: 0; color: #3f3f46;">Read articles and tutorials published on systems engineering and computer science.</p>
+        </div>
+
+        <div id="blogPostsContainer" data-type="recent">
+          <!-- Blog cards rendered by main.js with static fallback -->
+        </div>
+
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="blog.html" class="btn-pixel-primary" style="padding: 0.85rem 2rem;">
+            <span>[ 📰 VIEW ALL BLOG POSTS ]</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotify / Music Section -->
+    <section class="section">
+      <div class="container">
+        <div class="pixel-box">
+          <div class="grid grid-cols-2 items-center gap-8">
+            <!-- Music Stage (Left) -->
+            <div style="display: flex; flex-direction: column; align-items: center;">
+              <div class="pixel-box" style="position: relative; width: 100%; max-width: 340px; padding: 0.75rem; text-align: center; margin-bottom: 1.5rem; box-shadow: var(--shadow-sm);">
+                <p class="font-press" style="font-size: 9px; margin: 0; line-height: 1.4;">
+                  💬 "I LOVE MUSIC! HERE ARE SOME OF MY FAVORITE TRACKS ♪"
+                </p>
+              </div>
+
+              <div class="hero-stage-box" style="width: 100%; max-width: 340px;">
+                <div class="flex items-center justify-between" style="border-bottom: 2px solid #000; padding-bottom: 0.4rem; margin-bottom: 0.6rem; font-family: var(--font-press); font-size: 9px;">
+                  <span class="flex items-center gap-1.5">
+                    <span class="pixel-blink" style="display: inline-block; width: 6px; height: 6px; background: #000;"></span>
+                    DJ_AVATAR.SPR
+                  </span>
+                  <span class="pixel-badge-dark" style="font-size: 7px; padding: 2px 4px;">STEREO ON</span>
+                </div>
+                <div class="stage-frame" style="min-height: 260px;">
+                  <img src="assets/images/avatar.png" alt="Music Avatar" class="stage-img" style="max-height: 260px;">
+                </div>
+                <div class="stage-floor">
+                  ▶ NOW PLAYING // SOUND TEST
+                </div>
+              </div>
+            </div>
+
+            <!-- Spotify Track List (Right) -->
+            <div>
+              <div class="flex items-center justify-between" style="border-bottom: 2px solid #000; padding-bottom: 0.5rem; margin-bottom: 1.25rem; font-family: var(--font-press); font-size: 11px;">
+                <span class="flex items-center gap-2">
+                  <span>🎵</span>
+                  <span>TRACK_PLAYLIST</span>
+                </span>
+                <span style="font-size: 9px; color: #71717a;">4 TRACKS LOADED</span>
+              </div>
+
+              <div class="flex flex-col gap-3">
+                <div class="pixel-box" style="padding: 0.4rem;">
+                  <iframe src="https://open.spotify.com/embed/track/4DhyEPT1syGLKMnKDo1vvh?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="pixel-box" style="padding: 0.4rem;">
+                  <iframe src="https://open.spotify.com/embed/track/68FHdrL6dbruEBrfLjR52a?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="pixel-box" style="padding: 0.4rem;">
+                  <iframe src="https://open.spotify.com/embed/track/2kJwzbxV2ppxnQoYw4GLBZ?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                <div class="pixel-box" style="padding: 0.4rem;">
+                  <iframe src="https://open.spotify.com/embed/track/530l1XggFTVKZIM3khE10r?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Transmission Relay -->
+    <section class="section">
+      <div class="container">
+        <div class="pixel-box" style="max-width: 680px; margin: 0 auto;">
+          <div class="flex items-center justify-between" style="border-bottom: 3px solid #000; padding-bottom: 0.75rem; margin-bottom: 1.5rem; font-family: var(--font-press); font-size: 11px;">
+            <span class="flex items-center gap-2">
+              <span>✉</span>
+              <span>TRANSMISSION: NEW MESSAGE</span>
+            </span>
+            <span class="pixel-badge-dark" style="font-size: 8px;">[ READY ]</span>
+          </div>
+
+          <div id="contactSuccessAlert" class="pixel-box" style="display: none; background: #fafafa; margin-bottom: 1.5rem; border-color: #000;"></div>
+
+          <form id="contactForm" class="flex flex-col gap-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="font-press" style="font-size: 10px; display: block; margin-bottom: 0.4rem;">&gt; SENDER NAME:</label>
+                <input class="form-control" type="text" name="name" placeholder="Your name or callsign" required>
+              </div>
+              <div>
+                <label class="font-press" style="font-size: 10px; display: block; margin-bottom: 0.4rem;">&gt; SENDER EMAIL:</label>
+                <input class="form-control" type="email" name="email" placeholder="name@domain.com" required>
+              </div>
+            </div>
+
+            <div>
+              <label class="font-press" style="font-size: 10px; display: block; margin-bottom: 0.4rem;">&gt; MESSAGE PAYLOAD:</label>
+              <textarea class="form-control" name="message" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button class="btn-pixel-primary" type="submit" style="padding: 0.85rem; font-size: 11px;">
+              <span>[ 🚀 TRANSMIT MESSAGE ]</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="grid grid-cols-3 gap-8">
+          <!-- Col 1 -->
+          <div>
+            <div class="flex items-center gap-2" style="font-family: var(--font-press); font-size: 12px; margin-bottom: 0.75rem;">
+              <span>👾 PRAMUDITA.EXE</span>
+            </div>
+            <p style="font-size: 0.95rem; color: #3f3f46; margin-bottom: 1rem;">
+              Software Engineer specializing in low-level systems, native desktop programming, Linux, machine learning, and fullstack applications.
+            </p>
+            <div class="social-group">
+              <a href="https://github.com/pramahmad" target="_blank" class="social-btn" title="GitHub">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M5 1h6v1h2v2h1v4h-1v2h-1v1h-1v2h-1v2H7v-2H6v-2H5v-1H4v-2H3V4h1V2h2V1h-1zm1 2H4v2H3v3h1v1h1v1h1v1h4v-1h1v-1h1V8h1V5h-1V3h-2V2H6v1zm-1 4H4v2h2V7H5zm6 0h-2v2h2V7z"/></svg>
+              </a>
+              <a href="https://www.instagram.com/suhn_flou_er/?hl=en" target="_blank" class="social-btn" title="Instagram">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2h12v12H2V2zm2 2v8h8V4H4zm7 1h-1v1h1V5zm-4 1H6v4h4V6H7zm-1 1h2v2H6V7z"/></svg>
+              </a>
+              <a href="https://twitter.com/PramuditaAhmad1" target="_blank" class="social-btn" title="Twitter">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2h4l2 3 2-3h4l-4 5 5 7h-4l-3-4-3 4H2l5-6L2 2zm3 2l6 8h2L7 4H5z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/in/pramudita-ahmad-4ba11a232/" target="_blank" class="social-btn" title="LinkedIn">
+                <svg viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M2 2h3v3H2V2zm0 4h3v8H2V6zm5 0h3v1h1c.5-.7 1.3-1 2.3-1 1.7 0 2.7 1.1 2.7 3.3V14h-3v-4.5c0-.8-.3-1.5-1.2-1.5-.9 0-1.3.7-1.3 1.6V14H7V6z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2 -->
+          <div>
+            <h4 style="border-bottom: 2px solid #000; padding-bottom: 0.4rem; margin-bottom: 1rem;">NAVIGATION</h4>
+            <ul class="footer-nav">
+              <li><a href="index.html">▶ HOME</a></li>
+              <li><a href="me.html">▶ ABOUT ME</a></li>
+              <li><a href="project.html">▶ PROJECTS</a></li>
+              <li><a href="blog.html">▶ BLOG POSTS</a></li>
+              <li><a href="contact.html">▶ CONTACT</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div>
+            <h4 style="border-bottom: 2px solid #000; padding-bottom: 0.4rem; margin-bottom: 1rem;">CONNECT / INQUIRY</h4>
+            <p style="font-size: 0.9rem; color: #52525b; margin-bottom: 0.75rem;">
+              For project inquiries, partnerships, or teaching sessions:
+            </p>
+            <form id="footerInquiryForm" class="flex flex-col gap-2">
+              <input class="form-control" type="email" placeholder="Enter your email address" required style="font-size: 0.9rem; padding: 0.5rem 0.75rem;">
+              <button class="btn-pixel-primary" style="font-size: 9px; padding: 0.6rem;" type="submit">
+                [ ✉ TRANSMIT EMAIL ]
+              </button>
+              <p id="footerSuccessMsg" class="font-press" style="display: none; font-size: 9px; margin-top: 0.25rem;">✔ EMAIL RECEIVED!</p>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>&copy; 2026 PRAMUDITA AHMAD. ALL RIGHTS RESERVED.</div>
+          <div>[ <a href="https://github.com/pramahmad" target="_blank" style="text-decoration: underline;">OPEN SOURCE PROJECT</a> ]</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
