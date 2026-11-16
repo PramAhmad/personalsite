@@ -91,10 +91,26 @@
                 <span>3 min read</span>
               </span>
             </div>
+
+            <!-- Language Switcher Pill -->
+            <div class="lang-switcher-wrapper">
+              <div class="lang-switcher">
+                <button type="button" class="lang-btn active" data-switch-lang="id" aria-label="Baca dalam Bahasa Indonesia">
+                  <span>🇮🇩</span>
+                  <span>Indonesia</span>
+                </button>
+                <button type="button" class="lang-btn" data-switch-lang="en" aria-label="Read in English">
+                  <span>🇬🇧</span>
+                  <span>English</span>
+                </button>
+              </div>
+            </div>
           </header>
 
-          <!-- Article Content -->
-          <div class="article-body">
+          <!-- ========================================================
+               BAHASA INDONESIA CONTENT (DEFAULT)
+               ======================================================== -->
+          <div class="article-body lang-content" data-lang="id">
             <h2>Emang ada String di C?</h2>
             <p>
               Di bahasa C, sebenarnya nggak ada tipe data <code>string</code> khusus seperti di bahasa tingkat tinggi lainnya.
@@ -170,42 +186,44 @@ fgets(nama, sizeof(nama), stdin);</code></pre>
 
             <h2>Manipulasi String dengan &lt;string.h&gt;</h2>
             <p>
-              Karena string di C adalah array, kita tidak bisa memakai operator seperti tanda plus (<code>+</code>) untuk menggabungkan string atau operator sama dengan (<code>==</code>) untuk membandingkannya. Kita menggunakan fungsi bawaan dari library standar <code>&lt;string.h&gt;</code>.
+              Karena string di C adalah array, kita tidak bisa memakai operator matematika seperti tanda tambah (<code>+</code>) untuk menggabungkan string atau operator kesetaraan (<code>==</code>) untuk membandingkannya. Kita menggunakan fungsi bawaan dari library standar <code>&lt;string.h&gt;</code>.
             </p>
 
-            <table>
-              <thead>
-                <tr>
-                  <th>Fungsi</th>
-                  <th>Kegunaan</th>
-                  <th>Contoh Pemakaian</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><code>strlen()</code></td>
-                  <td>Menghitung panjang string tanpa menghitung <code>'\0'</code></td>
-                  <td><code>strlen("Kopi")</code> menghasilkan <code>4</code></td>
-                </tr>
-                <tr>
-                  <td><code>strcpy()</code></td>
-                  <td>Menyalin string sumber ke variabel tujuan</td>
-                  <td><code>strcpy(dest, src)</code></td>
-                </tr>
-                <tr>
-                  <td><code>strcat()</code></td>
-                  <td>Menggabungkan dua string (concat)</td>
-                  <td><code>strcat(sapaan, nama)</code></td>
-                </tr>
-                <tr>
-                  <td><code>strcmp()</code></td>
-                  <td>Membandingkan dua string (return <code>0</code> jika sama)</td>
-                  <td><code>strcmp(input, "admin")</code></td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Fungsi</th>
+                    <th>Kegunaan</th>
+                    <th>Contoh Pemakaian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>strlen()</code></td>
+                    <td>Menghitung panjang string tanpa menghitung <code>'\0'</code></td>
+                    <td><code>strlen("Kopi")</code> menghasilkan <code>4</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>strcpy()</code></td>
+                    <td>Menyalin string sumber ke variabel tujuan</td>
+                    <td><code>strcpy(dest, src)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>strcat()</code></td>
+                    <td>Menggabungkan dua string (concat)</td>
+                    <td><code>strcat(sapaan, nama)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>strcmp()</code></td>
+                    <td>Membandingkan dua string (return <code>0</code> jika sama persis)</td>
+                    <td><code>strcmp(input, "admin")</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
 
-            <h2>Contoh Code Sederhana</h2>
+            <h2>Contoh Program Sederhana</h2>
             <pre><code>#include &lt;stdio.h&gt;
 #include &lt;string.h&gt;
 
@@ -227,12 +245,12 @@ int main(void) {
             <div class="code-output">
               <code>Halo Pram
 Panjang stringnya: 9</code>
-</div>
+            </div>
 
             <h2>Kapan Pakai Fungsi Apa? (Kasus Nyata)</h2>
             <p>Berikut beberapa skenario nyata dalam pengembangan software:</p>
             <ol>
-              <li><strong>Hitung panjang input user:</strong> Gunakan <code>strlen(nama)</code> untuk validasi panjang minimum atau maksimum password dan username.</li>
+              <li><strong>Hitung panjang input user:</strong> Gunakan <code>strlen(nama)</code> untuk validasi batas minimal atau maksimal username dan password.</li>
               <li><strong>Copy data antar variabel:</strong> Gunakan <code>strcpy(dest, src)</code> untuk duplikasi data atau membuat backup salinan teks.</li>
               <li><strong>Gabung string:</strong> Gunakan <code>strcat(fullname, lastname)</code> untuk merangkai format nama lengkap atau menyusun path file sistem.</li>
               <li><strong>Bandingkan string:</strong> Gunakan <code>strcmp(input, "admin")</code> untuk autentikasi user, parsing CLI argument, atau pengecekan role.</li>
@@ -240,7 +258,7 @@ Panjang stringnya: 9</code>
 
             <h2>Waspada Bahaya Buffer Overflow</h2>
             <p>
-              Buffer overflow adalah masalah klasik namun sangat berbahaya di bahasa C. Masalah ini terjadi saat data yang disalin melebihi kapasitas array yang sudah dipersiapkan di memory.
+              Buffer overflow adalah masalah klasik yang sangat berbahaya di bahasa C. Masalah ini terjadi saat data yang disalin melebihi kapasitas array yang sudah dipersiapkan di memory.
             </p>
 
             <p>Contoh kesalahan:</p>
@@ -251,7 +269,7 @@ strcpy(str, "Hello World"); /* BAHAYA: 11 karakter disalin ke wadah ukuran 5! */
             <ul>
               <li>Data di luar batas array tertimpa, merusak variabel lain di memory stack.</li>
               <li>Aplikasi langsung crash dengan status <code>Segmentation Fault</code>.</li>
-              <li>Menimbulkan celah keamanan fatal (security vulnerability) yang bisa dieksploitasi untuk pengambilalihan hak akses program.</li>
+              <li>Menimbulkan celah keamanan fatal yang bisa dieksploitasi untuk pengambilalihan kontrol program.</li>
             </ul>
 
             <p><strong>Solusi Pencegahan:</strong></p>
@@ -266,10 +284,194 @@ strcpy(str, "Hello World"); /* BAHAYA: 11 karakter disalin ke wadah ukuran 5! */
               Bekerja dengan string di bahasa C memberikan pemahaman mendalam tentang bagaimana data teks sebenarnya disimpan di tingkat hardware:
             </p>
             <ul>
-              <li>String di C = array of karakter yang ditutup oleh <code>'\0'</code>.</li>
+              <li>String di C adalah array of karakter yang wajib ditutup oleh <code>'\0'</code>.</li>
               <li>Tidak ada tipe data string built-in bawaan compiler.</li>
               <li>Semua manipulasi string membutuhkan fungsi bantuan dari <code>&lt;string.h&gt;</code>.</li>
               <li>Developer wajib selalu sadar ukuran alokasi memory agar aman dari bahaya buffer overflow.</li>
+            </ul>
+          </div>
+
+          <!-- ========================================================
+               ENGLISH CONTENT
+               ======================================================== -->
+          <div class="article-body lang-content" data-lang="en" style="display: none;">
+            <h2>Is There Really a String in C?</h2>
+            <p>
+              In C, there is no dedicated <code>string</code> data type like in Python, JavaScript, or Java.
+            </p>
+            <p>
+              Instead, a string is simply a sequence of characters (<code>char</code>) laid out contiguously in memory, known as a <strong>character array</strong>.
+            </p>
+
+            <h2>The Core Rule: Null Terminator</h2>
+            <p>
+              Every valid string in C must end with a special byte called the <strong>null terminator</strong> (<code>'\0'</code>).
+            </p>
+            <p>
+              The <code>'\0'</code> character acts as a sentinel boundary. Without it, string reading functions have no idea where your text ends and will keep reading adjacent memory bytes until they happen upon a random zero byte or cause a segmentation fault.
+            </p>
+            <p>Consider this declaration:</p>
+            <pre><code>char str[] = "Halo";</code></pre>
+
+            <p>Here is how it is structured physically in computer memory (5 bytes total):</p>
+            <div class="code-output">
+              <code>['H']  ['a']  ['l']  ['o']  ['\0']</code>
+            </div>
+
+            <h2>How to Create Strings in C</h2>
+            <p>There are two primary ways to declare strings in C:</p>
+
+            <h3>1. Array of Char</h3>
+            <pre><code>char name[] = "Pram";</code></pre>
+            <p>
+              The array size is allocated on the stack and automatically fits the length of the text plus 1 byte for <code>'\0'</code>. The main advantage is that its contents are <strong>completely mutable</strong>.
+            </p>
+
+            <h3>2. Pointer</h3>
+            <pre><code>char *msg = "Halo";</code></pre>
+            <p>
+              The variable <code>msg</code> is a pointer pointing directly to a string literal in the read-only text segment of memory. This approach is flexible because the pointer can be redirected to another string at any time, but its contents <strong>must never be modified</strong>. Attempting to write into it will trigger a Segmentation Fault.
+            </p>
+
+            <h2>Array vs Pointer (When to Use Which?)</h2>
+
+            <h3>char[] (Array)</h3>
+            <ul>
+              <li>Mutable, you can modify any character in place.</li>
+              <li>Stored in local stack memory.</li>
+              <li>Fixed size determined at declaration.</li>
+            </ul>
+            <p><strong>Best for:</strong></p>
+            <ul>
+              <li>Reading user input from the terminal.</li>
+              <li>String manipulation routines (edits, concatenation, formatting).</li>
+              <li>Any scenario where data needs to change dynamically.</li>
+            </ul>
+            <pre><code>char name[20];
+fgets(name, sizeof(name), stdin);</code></pre>
+
+            <h3>char * (Pointer)</h3>
+            <ul>
+              <li>Immutable (points to a read-only string literal).</li>
+              <li>Only stores the memory address of the string.</li>
+              <li>Flexible because the pointer variable can be reassigned to other addresses.</li>
+            </ul>
+            <p><strong>Best for:</strong></p>
+            <ul>
+              <li>Constant strings that never change during execution.</li>
+              <li>Static status messages, UI labels, or constant function parameters.</li>
+              <li>Simple configuration constants.</li>
+            </ul>
+            <pre><code>char *msg = "Hello World";</code></pre>
+
+            <div class="article-callout">
+              <p><strong>Rule of thumb:</strong> Use <code>char[]</code> when data will be edited or needs user input. Use <code>char *</code> when the text is constant.</p>
+            </div>
+
+            <h2>String Manipulation with &lt;string.h&gt;</h2>
+            <p>
+              Because strings in C are raw arrays, you cannot use operators like <code>+</code> to join strings or <code>==</code> to compare them. Instead, C provides utility functions in the standard library <code>&lt;string.h&gt;</code>.
+            </p>
+
+            <div class="table-container">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Function</th>
+                    <th>Purpose</th>
+                    <th>Example Usage</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>strlen()</code></td>
+                    <td>Calculates string length excluding <code>'\0'</code></td>
+                    <td><code>strlen("Coffee")</code> returns <code>6</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>strcpy()</code></td>
+                    <td>Copies source string into destination buffer</td>
+                    <td><code>strcpy(dest, src)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>strcat()</code></td>
+                    <td>Appends source string to destination (concatenate)</td>
+                    <td><code>strcat(greeting, name)</code></td>
+                  </tr>
+                  <tr>
+                    <td><code>strcmp()</code></td>
+                    <td>Compares two strings lexicographically (returns <code>0</code> if equal)</td>
+                    <td><code>strcmp(input, "admin")</code></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h2>Simple Code Example</h2>
+            <pre><code>#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+
+int main(void) {
+    char greeting[30] = "Halo";
+    char name[] = "Pram";
+
+    /* Concatenate strings */
+    strcat(greeting, " ");
+    strcat(greeting, name);
+
+    printf("%s\n", greeting);
+    printf("String length: %zu\n", strlen(greeting));
+
+    return 0;
+}</code></pre>
+
+            <p>Program output:</p>
+            <div class="code-output">
+              <code>Halo Pram
+String length: 9</code>
+            </div>
+
+            <h2>When to Use Which Function? (Real-World Cases)</h2>
+            <p>Common practical scenarios in software engineering:</p>
+            <ol>
+              <li><strong>Validating user input length:</strong> Use <code>strlen(name)</code> to check minimum and maximum boundaries for usernames and passwords.</li>
+              <li><strong>Copying data between buffers:</strong> Use <code>strcpy(dest, src)</code> when creating duplicate records or data backups.</li>
+              <li><strong>Joining strings:</strong> Use <code>strcat(path, filename)</code> to build filesystem directory paths or format full names.</li>
+              <li><strong>Comparing strings:</strong> Use <code>strcmp(input, "admin")</code> for CLI flag parsing, command dispatching, or role verification.</li>
+            </ol>
+
+            <h2>Watch Out for Buffer Overflow!</h2>
+            <p>
+              Buffer overflow is a classic vulnerability in C programming. It occurs when you write more bytes into an array than the memory buffer was allocated to hold.
+            </p>
+
+            <p>A dangerous example:</p>
+            <pre><code>char str[5];
+strcpy(str, "Hello World"); /* DANGER: 11 bytes forced into a 5-byte buffer! */</code></pre>
+
+            <p>Consequences of buffer overflow:</p>
+            <ul>
+              <li>Overwriting adjacent stack memory and corrupting unrelated variables.</li>
+              <li>Immediate application crashes with <code>Segmentation Fault</code>.</li>
+              <li>Severe security vulnerabilities that attackers can exploit to execute arbitrary code.</li>
+            </ul>
+
+            <p><strong>Prevention Best Practices:</strong></p>
+            <ul>
+              <li>Always allocate enough space for all characters plus 1 extra byte for the null terminator.</li>
+              <li>Use bounded functions like <code>strncpy(dest, src, sizeof(dest) - 1)</code> or <code>snprintf()</code> instead of unbounded <code>strcpy()</code>.</li>
+              <li>Use <code>fgets()</code> for reading user input from standard input, and never use obsolete functions like <code>gets()</code>.</li>
+            </ul>
+
+            <h2>Summary</h2>
+            <p>
+              Working with strings in C provides a clear understanding of how computer hardware actually represents text data:
+            </p>
+            <ul>
+              <li>A string in C is a character array terminated by <code>'\0'</code>.</li>
+              <li>There is no built-in primitive string type in the compiler.</li>
+              <li>All string manipulation relies on functions from <code>&lt;string.h&gt;</code>.</li>
+              <li>Always stay aware of buffer sizes and memory boundaries to keep your code safe and crash-free.</li>
             </ul>
           </div>
 

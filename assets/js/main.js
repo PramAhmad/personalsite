@@ -2,7 +2,41 @@
 document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMaxStr();
+  initLangSwitcher();
 });
+
+/* ============================================================
+   BILINGUAL LANGUAGE SWITCHER (ID / EN)
+   ============================================================ */
+function initLangSwitcher() {
+  const switchers = document.querySelectorAll('.lang-switcher');
+  if (!switchers.length) return;
+
+  switchers.forEach(switcher => {
+    const buttons = switcher.querySelectorAll('.lang-btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetLang = btn.getAttribute('data-switch-lang');
+        if (!targetLang) return;
+
+        // Update active class on buttons
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Toggle language content containers
+        const article = switcher.closest('.article-wrapper') || document;
+        const langContents = article.querySelectorAll('.lang-content');
+        langContents.forEach(content => {
+          if (content.getAttribute('data-lang') === targetLang) {
+            content.style.display = 'block';
+          } else {
+            content.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+}
 
 /* ============================================================
    STRING TRUNCATION / MAX STR HELPER
@@ -53,10 +87,13 @@ function initNavbar() {
 
   // Active link highlight
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const isBlogSection = window.location.pathname.includes('/blog') || currentPath.startsWith('blog');
   const navLinks = document.querySelectorAll('.nav-link, .mobile-link');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (isBlogSection && (href === 'blog.html' || href === 'index.html' && window.location.pathname.includes('/blog/'))) {
+      if (href.includes('blog')) link.classList.add('active');
+    } else if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
     }
   });
