@@ -14,7 +14,6 @@ const PORTFOLIO_DATA = {
     socials: {
       github: "https://github.com/pramahmad",
       instagram: "https://www.instagram.com/suhn_flou_er/?hl=en",
-      twitter: "https://twitter.com/PramuditaAhmad1",
       linkedin: "https://www.linkedin.com/in/pramudita-ahmad-4ba11a232/",
       facebook: "https://www.facebook.com/pramudita.ahmad.10"
     }
