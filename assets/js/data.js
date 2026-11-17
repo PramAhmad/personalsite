@@ -28,6 +28,7 @@ const PORTFOLIO_DATA = {
       date: "Nov 17, 2026",
       readTime: "6 min read",
       excerpt: "From discovering HTML in 2014, exploring Vue and Supabase, to realizing that sometimes the best engineering decision isn't adding more technology, it's knowing when to strip it away and return to the fundamentals.",
+      thumbnail: "assets/images/why-i-rewrote-my-personal-site-thumbnail.png",
       url: "blog-why-i-rewrote-my-personal-site.html"
     },
     {
