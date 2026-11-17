@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavbar();
   initMaxStr();
   initLangSwitcher();
+  initVideoEmbeds();
 });
 
 /* ============================================================
@@ -95,6 +96,41 @@ function initNavbar() {
       if (href.includes('blog')) link.classList.add('active');
     } else if (href === currentPath || (currentPath === '' && href === 'index.html')) {
       link.classList.add('active');
+    }
+  });
+}
+
+/* ============================================================
+   RESPONSIVE VIDEO EMBED WITH SAFE PROTOCOL FALLBACK
+   ============================================================ */
+function initVideoEmbeds() {
+  const videoContainers = document.querySelectorAll('[data-youtube-id]');
+  if (!videoContainers.length) return;
+
+  const isLocalFile = window.location.protocol === 'file:';
+
+  videoContainers.forEach(container => {
+    const videoId = container.getAttribute('data-youtube-id');
+    const videoTitle = container.getAttribute('data-video-title') || 'YouTube Video Player';
+
+    if (isLocalFile) {
+      // YouTube blocks iframe playback on file:// protocol with Error 153.
+      // Keep high-res facade and open in YouTube when clicked.
+      container.addEventListener('click', () => {
+        window.open(`https://www.youtube.com/watch?v=${videoId}`, '_blank');
+      });
+    } else {
+      // On http:// or https:// (localhost, Live Server, GitHub Pages), load live iframe
+      container.innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${videoId}?rel=0"
+          title="${videoTitle}"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      `;
     }
   });
 }
