@@ -1,6 +1,6 @@
-# Pramudita Personal Site (HCJ Stack)
+# Pramudita Personal Site (HTML, CSS, JavaScript)
 
-Situs web personal Pramudita Ahmad yang dibangun dengan arsitektur **HCJ (HTML, CSS, JavaScript) murni**:
+Situs web personal Pramudita Ahmad yang dibangun dengan arsitektur **HTML, CSS, dan JavaScript murni**:
 - **Zero Build Step & Zero Bundlers**: Tanpa Webpack, Vite, Nuxt, atau Node.js runtime.
 - **Zero Frameworks & Zero CSS Compilers**: 100% Pure CSS modern minimalis dengan tipografi font Inter (tanpa Tailwind).
 - **Zero External Backend / Database**: Tanpa Supabase, PostgreSQL, atau CMS. Seluruh artikel dan konten tersimpan statis.

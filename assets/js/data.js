@@ -23,7 +23,7 @@ const PORTFOLIO_DATA = {
   articles: [
     {
       id: "why-i-rewrote-my-personal-site",
-      title: "Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to the HCJ (HTML, CSS, JavaScript) Stack",
+      title: "Why I Rewrote My Personal Site from Nuxt, Supabase, and Tailwind to HTML, CSS, and JavaScript",
       category: "Architecture",
       date: "Nov 17, 2026",
       readTime: "6 min read",
