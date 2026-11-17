@@ -1,7 +1,5 @@
 # Pramudita Personal Site (HCJ Stack)
 
-> "Engineering is not about using as many technologies as possible. It's about understanding the problem, respecting the platform, and choosing an appropriate solution."
-
 Situs web personal Pramudita Ahmad yang dibangun dengan arsitektur **HCJ (HTML, CSS, JavaScript) murni**:
 - **Zero Build Step & Zero Bundlers**: Tanpa Webpack, Vite, Nuxt, atau Node.js runtime.
 - **Zero Frameworks & Zero CSS Compilers**: 100% Pure CSS modern minimalis dengan tipografi font Inter (tanpa Tailwind).
@@ -10,10 +8,10 @@ Situs web personal Pramudita Ahmad yang dibangun dengan arsitektur **HCJ (HTML, 
 
 ---
 
-## 📁 Struktur File
+## Struktur File
 
 ```text
-pramudita-html/
+root/
 ├── assets/
 │   ├── css/
 │   │   └── style.css       # Pure Vanilla CSS (Clean minimalist modern, responsive, typography)
@@ -34,7 +32,7 @@ pramudita-html/
 
 ---
 
-## 🖥 Cara Menjalankan
+## 🖥Cara Menjalankan
 
 Cukup buka file `index.html` langsung di browser, atau jalankan server lokal sederhana:
 ```bash
