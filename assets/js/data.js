@@ -6,8 +6,8 @@ const PORTFOLIO_DATA = {
     headline: "Hello Everyone, I'm Pramudita",
     title: "Software Engineer , Music & Teaching",
     subtitle: "I do code for fun & I love it",
-    aboutMe: "Hello, I'm Pramudita Ahmad, a 21-year-old Information Systems student at Siliwangi University. I've been coding since I was 17, I love learning anything but learning in tech is another level. I have a dream to become a teacher in computer science, cause sharing is caring.",
-    socialDescription: "If you want to connect with me, you can reach out through my social media accounts, i humble btw^^",
+    aboutMe: "Hello, I'm Pramudita Ahmad, a 22-year-old Information Systems student at Siliwangi University. I'm really passionate about software engineering. I also love exploring science just for fun, like astronomy, biology, and physics, but software engineering is what I take seriously. My dream is to become a teacher in computer science, because sharing is caring.",
+    socialDescription: "If you want to connect with me, you can reach out through my social media accounts.",
     resumeUrl: "assets/images/resume.pdf",
     githubUrl: "https://github.com/pramahmad",
     email: "pramuditaadit2810@gmail.com",
@@ -38,6 +38,7 @@ const PORTFOLIO_DATA = {
       date: "Apr 21, 2026",
       readTime: "3 min read",
       excerpt: "Di bahasa C, sebenarnya nggak ada tipe data string khusus. Cuma ada sekumpulan karakter (char) yang diakhiri null terminator. Bedah tuntas perbedaan array vs pointer, fungsi <string.h>, dan cara mencegah buffer overflow.",
+      thumbnail: "assets/images/all-about-string-in-c-thumbnail.png",
       url: "blog-all-about-string-in-c.html"
     }
   ]
